@@ -1,3 +1,4 @@
 * test-test
 
-[![Build Status](https://travis-ci.org/dgalcius/test-tex.svg?branch=master)](https://travis-ci.org/dgalcius/test-tex)
+ [[https://travis-ci.org/dgalcius/test-tex][https://travis-ci.org/dgalcius/test-tex.png?branch=master]]
+
