@@ -1,4 +1,4 @@
 
 
 %.pdf: %.tex
-	pdflatex -recorder -interaction=batchmode $<
+	pdflatex -recorder -interaction=nonstopmode $<
