@@ -1,14 +1,15 @@
 before_install:
-- "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng"
+- sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended
+  texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng
 script:
 - mkdir _build
 - pdflatex -output-directory _build sample2e.tex
 deploy:
   provider: releases
   api_key:
-    secure: [YOUR KEY]
+    secure: XKR8wDnEBQHAMzg8336GeY/UVSV85EmJVGnrAMvQyB/5EzylEaevdHjUPArpiMc6kFooWlRiEH3lEOdlJC1XFMQ/xIF4R9QjzVJQsXmL5CQF51Ayh4mKVwzULUFmotncs7WhWLIq0n1WajfXfhULDPca0V0Y1yXM0qg+pRDu62EUbPM2QecuoNnz37RDFkgDrpVRZ/KMplDDHB1snJFDodPkmiZRYtAR24l0XeyJsfnqPpdGPU8OqJ4IQ0mQ6toCEBCXUleQrCDErMmkwt7rNxu84RvGLl2xx1jdn/WpR8Xm5BAJv7zXcBbF+rZGSF1Sv4Pj1DIjgDg5ZXT2kPv7CO/l62VMMB3p1zzTNeli7c+1xNweKPfqzVi1FoLc+yMLdYmJtsyAl3Rg5Ratj5ZOOa3HYkGjy9I0V+B5xM/2+Plig3wTyJd5pVpcDooHAFy7HFrMxSdYDpvCiV3XX1OtnNA67s+pX9W73HpLV+f7pBeRwZp7NSp/GgPzNeATpgUxIUM75vaSfFndZBFw/Hxf2M9p3lBelRZY517HV7FI5imgJnH+7s2iqlCqXBvygAiu4+kc+MLosuoWrzTexQlBaMC/tDBtQ435PG5fCivgUxAu6JKrTawbgieJoyY8wlD6+dVNqBKTgcXQo46/6OPbLC6XyY8GAuhMADy0ld0Jx6I=
   file:
-  - _build/sample2e.pdf
+    _build/sample2e.pdf
   skip_cleanup: true
   on:
     tags: true
